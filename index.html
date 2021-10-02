@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="prism.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="style/style.css" />
+  </head>
+  <body>
+        <div class="wrapper">
+          <div class="container">
+            <div class="row">
+              <div class="col-xl-1 col-lg-1 col-sm-6">
+                <div class="logo__block">
+                  <a target="_blanck" href="https://prismjs.com/index.html">
+                    <img src="img/logo.svg" alt="#">
+                  </a>
+                </div>
+              </div>
+              <div class="col-xl-11 col-lg-11 col-sm-6">
+                <div class="info__block">
+                  <h1><span>Prism</span> - это легкий расширяемый инструмент выделения синтаксиса, созданный с учетом современных веб-стандартов. Он используется на миллионах веб-сайтов, в том числе на некоторых из тех, которые вы посещаете ежедневно.</h1>
+                </div>
+              </div>
+              <div class="col-xl-6 col-lg-6 col-md-12">
+                <h2>Подсветка кода с помощью Prism</h2> 
+                <p>Существует много скриптов и плагинов, позволяющих сделать на сайте подсветку кода, 
+                    например,html или css. В этой статье разберу преимущества скрипта Prism и как установить его на сайт. 
+                    На самом сайте Призм руководства на русском языке нет, поэтому и решил подготовить небольшую инструкцию.</p>
+                    <h2>Почему именно Prism</h2>
+                    <span class="text__info">Его преимущества:</span>
+                    <ul>
+                      <li>Простая программа в установке и использовании.</li>
+                      <li>Маленький размер: ядро на 7KB, плюс тема – 2KB, плюс примерно 1KB на каждый подключенный язык.</li>
+                      <li>Можно легко стилизовать вывод под свой сайт.</li>
+                      <li>Поддерживает все распространенные языки: HTML, CSS, JS, PHP, Python, C#, C++ и многие другие.</li>
+                      <li>Есть несколько цветовых тем.</li>
+                      <li>Существуют дополнения для вывода нумерации строк, отображения языка и т.д.</li>
+                      <li>Скрипт можно дописывать под свои нужды.</li>
+                    </ul>
+                    <span class="text__info">Установка:</span>
+                    <p>Для установки нужно зайти на сайт <a target="_blank" href="https://prismjs.com/download.html">https://prismjs.com/download.html</a> , выбрать необходимые пункты.</p>
+                    <div class="images__block">
+                      <img src="img/prism2.jpg" alt="#">
+                    </div>
+                    <ul>
+                      <li>Minified version (если только не собираетесь заниматься доработкой скрипта).</li>
+                      <li>Тема – пример работы можно увидеть в конце страницы. Например, вот так выглядит код в теме Okaidia:</li>
+                    </ul>
+                    <div class="images__block">
+                      <img src="img/prism1.jpg" alt="#">
+                    </div>
+                    <ul>
+                      <li>Languages (Языки) – выбирайте только необходимое, так как они увеличивают объем кода. При необходимости потом можно дополнить скрипт.</li>
+                      <li>Plugins (плагины) – здесь могут быть полезными Line Numbers (нумерация строк) и Show Language (Показывать язык).</li>
+                    </ul>
+              </div> 
+              <div class="col-xl-6 col-lg-6 col-md-12">
+                <div class="code__block">
+                  <div class="images__block image__js">
+                    <img src="img/1200px-Javascript-shield.svg.png" alt="#">
+                  </div>
+                  <pre class="lang-javascript"><code>
+                    $(document).ready(function($) {
+                      // Нажатие "Закрыть"
+                      $('.popup-close').click(function() {
+                          $(this).parents('.popup-black').fadeOut();
+                          return false;
+                      });       
+                    
+                      // Нажатие клавиши Esc
+                      $(document).keydown(function(e) {
+                          if (e.keyCode === 27) {
+                              e.stopPropagation();
+                              $('.popup-black').fadeOut();
+                          }
+                      });
+                       
+                      // Клик по фону
+                      $('.popup-black').click(function(e) {
+                          if ($(e.target).closest('.popup').length == 0) {
+                              $(this).fadeOut();                 
+                          }
+                      });
+                  });
+                  </code></pre> 
+                  <div class="images__block image__css">
+                    <img src="img/1200px-CSS.3.svg.png" alt="#">
+                  </div>
+                  <pre class="lang-css"><code>
+                    .code__block {
+                      max-width: 100%;
+                    }
+                    
+                    .images__block {
+                      width: 100%;
+                    }
+                    
+                    .images__block img {
+                      max-width: 100%;
+                    }
+                  </code></pre>
+                  <div class="images__block image__html">
+                    <img src="img/1024px-HTML5_Badge.svg.png" alt="#">
+                  </div>
+                  <pre class="lang-html">
+                  <code>
+                    &lt;h1> Подсветка кода с помощью Prism &lt;/h1>
+                    &lt;p>Существует много скриптов и плагинов, позволяющих сделать на сайте подсветку кода, 
+                    например,html или css. В этой статье разберу преимущества скрипта Prism и как установить его на сайт. 
+                    На самом сайте Призм руководства на русском языке нет, поэтому и решил подготовить небольшую инструкцию.&lt;/p>
+                    &lt;h2>Почему именно Prism &lt;/h2>
+                    &lt;span>Его преимущества:&lt;/span>
+                    &lt;ul>
+                      &lt;li>Простая программа в установке и использовании.&lt;/li>
+                      &lt;li>Маленький размер: ядро на 7KB, плюс тема – 2KB, плюс примерно 1KB на каждый подключенный язык.&lt;/li>
+                      &lt;li>Можно легко стилизовать вывод под свой сайт.&lt;/li>
+                      &lt;li>Поддерживает все распространенные языки: HTML, CSS, JS, PHP, Python, C#, C++ и многие другие.&lt;/li>
+                      &lt;li>Есть несколько цветовых тем.&lt;/li>
+                      &lt;li>Существуют дополнения для вывода нумерации строк, отображения языка и т.д.&lt;/li>
+                      &lt;li>Скрипт можно дописывать под свои нужды.&lt;/li>
+                      &lt;/ul>
+                      &lt;span>Установка&lt;/span>
+                  </code></pre>
+                </div>
+              </div>     
+              <div class="col-xl-12 col-lg-12 col-md-12">
+                <span class="text__info">Затем в конце страницы нужно скачать js и css файлы кнопками Download JS и Download CSS.</span>
+                    <div class="images__block">
+                      <img src="img/prism3.jpg" alt="">
+                    </div>
+                    <span class="text__info">После скачивания файлов их нужно загрузить на хостинг в корневую или какую-то внутреннюю папку сайта.
+                      Подключить файлы: внутри  документа
+                    </span>
+                    <h2>Пример работы</h2>
+                    <p>Чтобы вывести код с подсветкой на сайте, вам нужно обернуть его тегом и указать класс с названием языка в виде language-xxxx (либо в виде короткой версии lang-xxxx, например, lang-css).</p>
+                    <h2>Особенности установки для WordPress</h2>      
+                    <p>Нужно добавить в functions.php две строчки кода, которые подключат указанные файлы к сайту. Здесь предполагается, что файл javascript лежит у вас в папке js, а файл стилей в папке css.</p>    
+                    <pre class="lang-php">
+                      <code>
+                        wp_enqueue_script('prism', get_stylesheet_directory_uri() . '/js/prism.js', array(), false, true);
+                        wp_enqueue_style('prism', get_stylesheet_directory_uri() . '/css/prism.css');
+                      </code>
+                    </pre>  
+                    <h2>Плагины для WP использующие prism</h2>  
+                    <p>Для WP плагины, применяющие в своей работе скрипт prism. Найти их можно на этой странице <a target="_blank" href="https://wordpress.org/plugins/search/prism/">https://wordpress.org/plugins/search/prism/</a>. 
+                       Но лично мне больше нравится использование этого скрипта в чистом виде без плагина.</p>   
+              </div>      
+            </div>
+          </div>
+        </div>
+    <script src="prism.js"></script>
+</div>
+  </body>
+</html>
